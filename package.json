@@ -1,0 +1,14 @@
+{
+  "name": "accelerated.api.app",
+  "version": "1.0.0",
+  "description": "Example app for npm accelerated.api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm -v"
+  },
+  "author": "Haseeb Qureshi",
+  "license": "MIT",
+  "dependencies": {
+    "accelerated.api": "^1.0.2"
+  }
+}
