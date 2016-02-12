@@ -10,5 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "accelerated.api": "^1.0.2"
+    "accelerated.api": "*",
   }
 }
