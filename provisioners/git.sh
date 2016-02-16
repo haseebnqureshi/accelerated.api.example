@@ -4,9 +4,9 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-echo "[accelerated.api/provisioners/git.sh] -- Installing git"
+echo "[accelerated/provisioners/git.sh] -- Installing git"
 
 apt-get update -y > /dev/null
 apt-get install git -y > /dev/null
 
-echo "[accelerated.api/provisioners/git.sh] -- Finished installing!"
+echo "[accelerated/provisioners/git.sh] -- Finished installing!"
