@@ -6,8 +6,16 @@
   "scripts": {
     "test": "npm -v"
   },
-  "author": "Haseeb Qureshi",
+  "author": "Haseeb Qureshi <haseeb.n.qureshi@gmail.com> (http://twitter.com/_hq)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haseebnqureshi/accelerated.api.example.git"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haseebnqureshi/accelerated.api.example/issues"
+  },
+  "homepage": "https://github.com/haseebnqureshi/accelerated.api.example#readme",
   "dependencies": {
     "accelerated.api": "*"
   }

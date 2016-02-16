@@ -24,9 +24,6 @@ npm install node-gyp -g --loglevel=error
 echo "[accelerated/provisioners/node.sh] -- -- Installing forever ..."
 npm install forever -g --loglevel=error
 
-echo "[accelerated/provisioners/node.sh] -- -- Installing bower ..."
-npm install bower -g --loglevel=error
-
 echo "[accelerated/provisioners/node.sh] -- Installing application"
 
 npm install --loglevel=error > /dev/null
