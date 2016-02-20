@@ -26,6 +26,6 @@ npm install forever -g --loglevel=error
 
 echo "[accelerated/provisioners/node.sh] -- Installing application"
 
-npm install --loglevel=error > /dev/null
+npm install --loglevel=error --unsafe-perm > /dev/null
 
 echo "[accelerated/provisioners/node.sh] -- Finished installing!"

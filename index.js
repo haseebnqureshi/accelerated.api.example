@@ -1,10 +1,10 @@
 
 var api = require('accelerated.api')();
 
-api.useModels(['test']);
+api.useModels(['accUsers', 'accEmails', 'test']);
 
-api.useMiddlewares(['test']);
+api.useMiddlewares(['accBodyParser', 'accLogin', 'test']);
 
-api.useRoutes(['test']);
+api.useRoutes(['accLogin', 'test']);
 
 api.run();

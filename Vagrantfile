@@ -6,8 +6,13 @@ VAGRANTFILE_API_VERSION = "2"
 
 $script = <<SCRIPT
 	sudo su
+	apt-get clean -y
+	apt-get update -y
 	bash ./provisioners/git.sh
 	bash ./provisioners/node.sh
+	exit
+	api provision --database=rethinkdb
+	api provision --database=postgres
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
