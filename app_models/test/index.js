@@ -1,8 +1,9 @@
 module.exports = function(express, app, models) {
 
 	var model = {
-		test: function() {
-			console.log('Showing how we can insert a model...');
+		try: function() {
+			console.log('Showing how we can display all models...');
+			console.log("models", models);
 		}
 	};
 

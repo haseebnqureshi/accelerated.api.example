@@ -20,3 +20,5 @@ api.useRoutes([
 ]);
 
 api.run();
+
+api.models.test.try();
