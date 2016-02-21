@@ -1,6 +1,7 @@
 
 var api = require('accelerated.api');
 var example = require('accelerated.api.module');
+var emails = require('accelerated.api.emails');
 
 api.useMiddlewares([ 
 	'test',
@@ -9,7 +10,8 @@ api.useMiddlewares([
 
 api.useModels([
 	'test',
-	[example.key, example.model]
+	[example.key, example.model],
+	[emails.key, emails.model]
 ]);
 
 api.useRoutes([
