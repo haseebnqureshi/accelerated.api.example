@@ -27,16 +27,25 @@ Accelerated.api beautifully handles any model sub-dependencies by referencing a 
 In order to register your middleware, route, or model, simply call any of the following methods as such.
 
 ```
-var api = require('accelerated.api')();
+var api = require('accelerated.api');
+var example = require('accelerated.api.module');
 
-api.useModels([ 'test', 'another-model', 'and-another-model' ]);
+api.useMiddlewares([ 
+	'test',
+	[example.key, example.middleware]
+]);
 
-api.useMiddlewares([ 'test', 'another-middleware', 'and-another-middleware' ]);
+api.useModels([
+	'test',
+	[example.key, example.model]
+]);
 
-api.useRoutes([ 'test', 'another-route', 'and-another-route' ]);
+api.useRoutes([
+	'test',
+	[example.key, example.route]
+]);
 
 Note, your modules will get called in the order that they are registered. This is particularly important in waterfalling your middlewares and routes.
-
 ```
 
 ### Starting Your Server
