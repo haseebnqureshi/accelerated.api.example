@@ -18,7 +18,8 @@
   "homepage": "https://github.com/haseebnqureshi/accelerated.api.example#readme",
   "dependencies": {
     "accelerated.api": "*",
-    "accelerated.module": "*",
-    "accelerated.emails": "*"
+    "accelerated.api.module": "*",
+    "accelerated.api.emails": "*",
+    "accelerated.api.versioning": "*"
   }
 }

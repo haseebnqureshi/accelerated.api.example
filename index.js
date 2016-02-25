@@ -1,22 +1,24 @@
 
 var api = require('accelerated.api');
-var example = require('accelerated.api.module');
-var emails = require('accelerated.api.emails');
+var apiModule = require('accelerated.api.module');
+var apiEmails = require('accelerated.api.emails');
+var apiVersioning = require('accelerated.api.versioning');
 
 api.useMiddlewares([ 
-	'test',
-	[example.key, example.middleware]
+	[apiVersioning.key, apiVersioning.middleware],
+	[apiModule.key, apiModule.middleware],
+	'test'
 ]);
 
 api.useModels([
 	'test',
-	[example.key, example.model],
-	[emails.key, emails.model]
+	[apiModule.key, apiModule.model],
+	[apiEmails.key, apiEmails.model]
 ]);
 
 api.useRoutes([
 	'test',
-	[example.key, example.route]
+	[apiModule.key, apiModule.route]
 ]);
 
 api.run();
