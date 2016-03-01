@@ -1,11 +1,13 @@
 
 var api = require('accelerated.api');
+var apiBodyParser = require('accelerated.api.body-parser');
 var apiModule = require('accelerated.api.module');
 var apiEmails = require('accelerated.api.emails');
 var apiVersioning = require('accelerated.api.versioning');
 
 api.useMiddlewares([ 
 	[apiVersioning.key, apiVersioning.middleware],
+	[apiBodyParser.key, apiBodyParser.middleware],
 	[apiModule.key, apiModule.middleware],
 	'test'
 ]);
