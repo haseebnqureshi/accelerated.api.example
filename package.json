@@ -19,8 +19,8 @@
   "dependencies": {
     "accelerated.api": "*",
     "accelerated.api.body-parser": "*",
-    "accelerated.api.module": "*",
     "accelerated.api.emails": "*",
+    "accelerated.api.module": "*",
     "accelerated.api.versioning": "*"
   }
 }
