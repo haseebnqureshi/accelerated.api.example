@@ -20,6 +20,7 @@
     "accelerated.api": "*",
     "accelerated.api.body-parser": "*",
     "accelerated.api.emails": "*",
+    "accelerated.api.model": "*",
     "accelerated.api.module": "*",
     "accelerated.api.versioning": "*"
   }
