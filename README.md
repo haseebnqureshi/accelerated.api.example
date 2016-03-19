@@ -12,15 +12,6 @@ In ```env.json```, you have default environment settings, but then you have envi
 
 Even better, you can still choose to not include any key environment variables and simply ```EXPORT``` variables in bash script, providing better security for production-ready apps, since everything gets loaded into node's ```process.env``` object.
 
-### Middlewares
-In your ```app_middlewares``` directory, we have different middleware modules. Each middleware is defined as a CommonJS module that has its own folder, and then ```index.js```. Refer to the ```test``` middleware to see how the DI (direct injection) works with the CommonJS module design pattern.
-
-### Routes
-In your ```app_routes``` directory, we have different route modules. Each route is defined as a CommonJS module that has its own folder, and then ```index.js```. Refer to the ```test``` route to see how the DI (direct injection) works with the CommonJS module design pattern.
-
-### Models
-In your ```app_models``` directory, we have different model modules. Each model is defined as a CommonJS module that has its own folder, and then ```index.js```. Refer to the ```test``` model to see how the DI (direct injection) works with the CommonJS module design pattern.
-
 Accelerated.api beautifully handles any model sub-dependencies by referencing a getter to all the models strapped. In other words, whenever a method is called on any model, accelerated.api's pattern then references the _then current_ list of models, and pulls the appropriate dependency. In other words, don't worry about the sub-dependencies in your model definitions. Just use the ```models``` variable that's injected into your model CommonJS module, and you'll be good to go.
 
 ### Using Middlewares, Routes, & Models
@@ -28,7 +19,7 @@ In order to register your middleware, route, or model, simply call any of the fo
 
 ```
 var api = require('accelerated.api');
-var example = require('accelerated.api.module');
+var example = require('accelerated.api.module').use();
 
 api.useMiddlewares([ 
 	'test',
@@ -45,8 +36,9 @@ api.useRoutes([
 	[example.key, example.route]
 ]);
 
-Note, your modules will get called in the order that they are registered. This is particularly important in waterfalling your middlewares and routes.
 ```
+
+Note, your modules will get called in the order that they are registered. This is particularly important in waterfalling your middlewares and routes.
 
 ### Starting Your Server
 Call ```api.run()``` in your node script, and viola! Accelerated.api starts your Express app server, given your ```env.json``` Express variables. You can even specify a callback in ```api.run()``` that gets called when the server successfully starts, in case you have extra logic to implement.
