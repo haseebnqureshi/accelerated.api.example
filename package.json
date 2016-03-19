@@ -4,7 +4,8 @@
   "description": "Example app for npm accelerated.api.",
   "main": "index.js",
   "scripts": {
-    "test": "npm -v"
+    "test": "npm -v",
+    "install": "node index.js setup"
   },
   "author": "Haseeb Qureshi <haseeb.n.qureshi@gmail.com> (http://twitter.com/_hq)",
   "repository": {
